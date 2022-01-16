@@ -1,0 +1,42 @@
+#addVacation{
+  margin-top: 2rem;
+  max-height: 50vh;
+}
+.closeModalB {
+  margin-left: 10px;
+}
+.addVacation-details {
+  resize: none;
+}
+#wrong-info {
+  -webkit-animation: fadeOut 8s;
+  animation: fadeOut 8s;
+  animation-fill-mode: none;
+}
+.emoji-wrong {
+  margin-bottom: 0.1rem;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  height: 1.3rem;
+  width: 1.5rem;
+}
+input#fileupload {
+  color: grey;
+}
+#fileupload::after {
+  content: "/Image ";
+}
+.previewImg{
+  max-height: 20vh;
+  max-width: 40vh;
+  width: 35vh;
+}
+.add_V_header{
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.35em;
+  letter-spacing: -2px;
+  line-height: 1rem;
+  text-transform: uppercase;
+}

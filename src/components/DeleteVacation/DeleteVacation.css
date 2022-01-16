@@ -1,0 +1,26 @@
+.deleteB {
+  bottom: 12.5px;
+  left: 7px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+#modal-bodyS {
+  align-items: center;
+  margin: 0 auto;
+}
+#modal-bodyS .card {
+  max-height: 230px;
+  margin-left: 0.8em;
+}
+
+button.deleteB.btn.btn-outline-danger {
+  margin-top: -15px;
+  margin-bottom: 5px;
+  margin-left: 12.5rem;
+  position: relative;
+}

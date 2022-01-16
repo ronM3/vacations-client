@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+
+.d-block{
+    height: 450px;
+    max-height: 450px;
+}
+.first-slide{
+    font-size: 2.7rem;
+    font-size: 800;
+    font-family: 'Comfortaa', cursive;
+}
+.slide-dest{
+    font-weight: 600;
+    font-family: 'Comfortaa', cursive;
+}
+#thiland-dest{
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+.text-box{
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 1px rgb(0 0 0 / 40%);
+    transform: 0.5;
+    transition: all 0.3s ease-in-out 0.2s;
+}
+.text-box :hover {
+    transform: scale(1.4);
+    transition: all 0.4s ease-in-out 0.4s;
+  }
+  .carousel-caption {
+    bottom: 3rem;
+}

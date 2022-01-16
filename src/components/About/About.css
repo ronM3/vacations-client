@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.about-left {
+  background-color: transparent;
+  color: #fff;
+}
+.about-left-content > div {
+  background: #12192c;
+  padding: 4rem 4rem 0.1rem 5rem;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.about-img img {
+  display: block;
+  width: 200px;
+}
+.about-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.shadow {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.about-left-content h2 {
+  margin: 2.2rem 0 0.6rem 0;
+  line-height: 0.5;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #b721ff;
+}
+.about-left-content h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 5px;
+  margin-top: 0.2rem;
+}
+.icons {
+  background: #12192c;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  border-radius: 0 0 12px 12px;
+}
+.icons li {
+  list-style-type: none;
+  background: #b721ff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.icons li:hover {
+  background: #edffec;
+  color: #000;
+}
+.icons a {
+  color: #fff;
+  list-style-type: none;
+  text-decoration-line: none;
+}
+
+.about-right {
+  background: #12192c;
+  height: 70vh;
+
+  max-width: 95vh;
+  color: #fff;
+  border-radius: 12px 12px 12px 12px;
+}
+.about-right h1 {
+  font-size: 5rem;
+
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.about-right h1 span {
+  color: #b721ff;
+}
+.about-right h2 {
+  font-weight: 600;
+  position: relative;
+  top: 0.8rem;
+}
+.techs {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.techs span {
+  margin-left: 1.1rem;
+  font-weight: bolder;
+}
+.about-para p {
+  font-weight: 300;
+  opacity: 0.8;
+  margin-top: 1.5rem;
+}
+.typing-demo {
+  background-color: rgb(230, 197, 203);
+  width: 11ch;
+  position: relative;
+  left: 22.5rem;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5em;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.img-fluid {
+  width: 1379px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.small-p {
+  position: relative;
+  bottom: 1rem;
+}
+.technogl {
+  position: relative;
+  bottom: 2.3rem;
+}
+@media only screen and (max-width: 950px) {
+  .typing-demo {
+    margin-left: -21rem;
+  }
+  .about-right{
+    overflow: hidden;
+    height: 80vh;
+  }
+}

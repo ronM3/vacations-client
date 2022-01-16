@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+.editB {
+  position: absolute;
+  display: grid;
+  height: 2.3rem;
+  left: 0.9rem;
+  top: 25.35rem;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+.editB-pen{
+ position: relative;
+ top: 5px;
+}
+@media only screen and (max-width: 950px) {
+    .editB {
+      top: 25.15rem;
+    }
+  }
+
+#uploadB{
+  background-color: rgb(221, 219, 219);
+}
+.modal-note{
+  font-size: 1rem;
+}
+.modal-header{
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.35em;
+  letter-spacing: -2px;
+  line-height: 0.2rem;
+  text-transform: uppercase;
+}

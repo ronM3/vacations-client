@@ -1,0 +1,17 @@
+.log-outB {
+  border-color: #6c757d;
+  max-height: 10px;
+  padding: 1px;
+}
+span.log-outB.navbar-text {
+  padding: 2px;
+}
+@media only screen and (max-width: 950px) {
+  .log-outB {
+    margin-left: 0rem;
+  }
+}
+.userSigned {
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+}

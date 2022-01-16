@@ -1,0 +1,111 @@
+@media only screen and (max-width: 950px) {
+  #register-modal {
+    margin-top: 3rem;
+  }
+}
+.signUpB {
+  text-decoration: none;
+  text-decoration-line: none;
+  background-color: white;
+}
+button.Register.btn.btn-light {
+  background-color: white;
+}
+
+.avatarLogin {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -40px;
+  width: 100px;
+  height: 95px;
+  border-radius: 55%;
+  z-index: 9;
+  background: #60c7c1;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+#register-modal {
+  position: relative;
+  top: 20px;
+  bottom: 90px;
+  text-align: end;
+}
+.modal-body-register {
+  font-weight: 500;
+}
+.modal-header {
+  border-bottom: 0px solid #dee2e6;
+}
+.form-floating > .form-control {
+  padding: 0.4rem 0.75rem;
+}
+.form-floating > .form-control,
+.form-floating > .form-select {
+  height: calc(3rem + 3.5px);
+  line-height: 1.25;
+}
+.floating-label {
+  color: grey;
+  font-weight: normal;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4bb71b;
+  fill: #fff;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 46px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 284px;
+  right: 155px;
+  stroke-width: 2;
+  stroke: #4bb71b;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px transparent;
+  }
+}
+.emoji-wrongName {
+  color: rgb(209, 209, 10);
+  background-color: transparent;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.8rem;
+}

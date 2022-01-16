@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+.d-flex {
+  margin-left: 55rem;
+}
+@media only screen and (max-width: 950px) {
+  .d-flex {
+    margin-left: 0;
+  }
+  #navbarScroll{
+    position: relative;
+    right: 10rem;
+  }
+}
+.navbar-brand {
+margin-left: 1.8rem;
+}
+#navbarScroll{
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  margin-left: 20rem;
+  transition: background-color .5s;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+
+}
+.nav-main {
+  background-color: rgb(255, 255, 255);
+box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.nav-title {
+  left: 50px;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+}
+a.nav-title.navbar-brand {
+  color: #00558a;
+}
+.icon-header{
+  height: 35px;
+}
+.log-out-icon{
+  font-size: medium;
+  margin-right: 4px;
+}
+.btn btn-outline-secondary{
+  padding: 50px;
+}
+.signB{
+  white-space: nowrap;
+}
+.AddVacationB{
+margin-right: 2rem;
+
+}
+#basic-nav-dropdown{
+  padding: 0;
+}
+button.AddVacationB.btn.btn-outline-secondary{
+  border: none;
+  text-align: center;
+  white-space: nowrap;
+
+}
+button.ChartReportsB.btn.btn-outline-secondary{
+border: none;
+}
