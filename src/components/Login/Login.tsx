@@ -3,9 +3,11 @@ import { Button, Modal } from "react-bootstrap";
 import "./login.css";
 import { useDispatch } from "react-redux";
 import { ActionType } from "../../Redux/action-type";
-import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 import { Exclamation } from "react-bootstrap-icons";
 import { io } from "socket.io-client";
+import axios from "axios";
 
 export default function Login() {
   const [show, setShow] = useState(false);
@@ -38,7 +40,7 @@ export default function Login() {
         return false;
       }
       const response = await axios.post(
-        "http://localhost:3001/users/login",
+        "/users/login",
         userRequestBody
       );
       const token: string = response.data.token;
@@ -59,7 +61,7 @@ export default function Login() {
       });
       socketConnection(token);
       axios
-        .get(`http://localhost:3001/followedVacations/user`)
+        .get("/followedVacations/user")
         .then((response) => {
           let vacationsID = response.data;
           dispatch({
@@ -68,7 +70,7 @@ export default function Login() {
           });
         });
       axios
-        .get(`http://localhost:3001/followedVacations/followersAmount`)
+        .get("/followedVacations/followersAmount")
         .then((response) => {
           let followersAmount = response.data;
           dispatch({
@@ -77,6 +79,7 @@ export default function Login() {
           });
         });
       setShow(false);
+      toast.success("Successful Login", {autoClose: 2000});
     } catch (error) {
       setValidDetails(true);
       setTimeout(() => {
@@ -87,7 +90,7 @@ export default function Login() {
   };
 
   function socketConnection(token: string) {
-    const socket = io("http://localhost:8000/", {
+    const socket = io("/", {
       query: { token },
     }).connect();
 
@@ -128,6 +131,7 @@ export default function Login() {
   }
   return (
     <div className="Login">
+     
       <Button className="signB" variant="light" onClick={() => setShow(true)}>
         Sign in
       </Button>
@@ -151,7 +155,7 @@ export default function Login() {
                   src="https://img.icons8.com/ios-filled/96/000000/passenger-with-baggage.png"
                 />
               </span>
-              <span className="sign-in">Sign in</span>
+              <span className="sign-in">LOG IN TO YOUR ACCOUNT</span>
             </Modal.Title>
           </Modal.Header>
           {validDetails && (
@@ -161,7 +165,8 @@ export default function Login() {
           )}
           <Modal.Body className="modal-body" id="modal-sign-body">
             <div className="form-group">
-              <label>Username</label>
+            <span className="input-icon"><i className="fa fa-user"></i></span>
+              <label className="form-labels">Username</label>
               <input
                 onChange={onUserNameChanged}
                 type="text"
@@ -172,7 +177,8 @@ export default function Login() {
               />
             </div>
             <div className="form-group">
-              <label>Password</label>
+            <span className="input-icon password"><i className="fas fa-lock"></i></span>
+              <label className="form-labels">Password</label>
               <input
                 onChange={onPasswordChanged}
                 type="password"
@@ -183,7 +189,7 @@ export default function Login() {
             <br></br>
             <button
               onClick={onLoginClicked}
-              className="btn btn-primary btn-block"
+              className="loginB"
             >
               Login
             </button>

@@ -25,7 +25,7 @@ export default function VacationCard(props: IVacation) {
     let vacationID = { vacationID: props.id };
     if (!props.isFollowed) {
       axios
-        .post("http://localhost:3001/followedVacations", vacationID)
+        .post("/followedVacations", vacationID)
         .then((response) => {
           dispatch({
             type: ActionType.followVacation,
@@ -34,7 +34,7 @@ export default function VacationCard(props: IVacation) {
         });
     } else {
       axios
-        .delete(`http://localhost:3001/followedVacations/${props.id}`)
+        .delete(`/followedVacations/${props.id}`)
         .then((response) => {
           dispatch({
             type: ActionType.UnfollowVacation,
@@ -50,7 +50,7 @@ export default function VacationCard(props: IVacation) {
         <Col lg={6}>
           <Card style={{ width: "18rem" }} className="cardV">
             <Card.Img variant="top" src={props.image} className="imageV" />
-            <Card.Body>
+            <Card.Body className="vCard-body">
               <Card.Title>{props.destination}</Card.Title>
               <Card.Text className="card-details">{props.details}</Card.Text>
               <hr></hr>

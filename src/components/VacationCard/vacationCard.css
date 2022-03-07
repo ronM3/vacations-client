@@ -3,17 +3,7 @@
   text-align: center;
   margin-top: 111px;
 }
-@media only screen and (max-width: 750px) {
-  .cardV {
-    margin-top: 30px;
-    height: 110vh;
-    max-height: 120vh;
-  }
-}
-
 .cardV {
-  height: 70vh;
-  max-height: 70vh;
   overflow: hidden;
   margin-top: 30px;
   box-shadow: rgb(87, 115, 146) 0px 20px 30px -10px;
@@ -30,6 +20,92 @@
 }
 .cardV:hover {
   transform: scale(1.05);
+}
+div.box.card {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border: 60%;
+}
+.vCard-body {
+  padding: 0.2rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .cardV {
+    height: max-content;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .cardV {
+    max-height: max-content;
+  }
+}
+.card-details {
+  height: 100px;
+  max-height: 100px;
+}
+.under-price {
+  margin-top: -1px;
+  color: grey;
+  font-size: 13px;
+}
+.favoriteB {
+  position: absolute;
+  padding: 12px;
+  margin-top: -3rem;
+  margin-left: 5.7rem;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+.datesV {
+  margin-top: -15px;
+}
+div.card-subtitle .priceT {
+  line-height: 0.1;
+}
+
+p.card-text.card-details {
+  height: 120px;
+  overflow-y: hidden;
+}
+p.card-text.card-details:hover {
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.imageV {
+  max-height: 35vh;
+  height: 27.5vh;
+}
+.followrs {
+  position: relative;
+  right: 6rem;
+  bottom: 2rem;
+  max-width: 3rem;
+  cursor: none;
+}
+.badge {
+  position: relative;
+  bottom: 2.9rem;
+}
+button.followrs {
+  max-height: 2.2rem;
+  max-width: 2.5rem;
+  cursor: none;
+  border: lightgray;
+  pointer-events: none;
+  border-radius: 40%;
+}
+.follow {
+  max-width: 1rem;
+}
+svg.follow {
+  max-width: 1rem;
 }
 @keyframes fadeIn {
   0% {
@@ -70,88 +146,4 @@
   100% {
     opacity: 1;
   }
-}
-div.box.card {
-  margin-top: 2rem;
-  margin-left: 2rem;
-  border: 60%;
-}
-.card-details {
-  height: 100px;
-  max-height: 100px;
-}
-
-.under-price {
-  margin-top: -1px;
-  color: grey;
-  font-size: 13px;
-}
-.favoriteB {
-  position: absolute;
-  padding: 12px;
-  margin-top: -3rem;
-  margin-left: 5.7rem;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  animation: fadeIn 2s;
-  -webkit-animation: fadeIn 2s;
-  -moz-animation: fadeIn 2s;
-  -o-animation: fadeIn 2s;
-  -ms-animation: fadeIn 2s;
-}
-.datesV {
-  margin-top: -15px;
-}
-div.card-subtitle .priceT {
-  line-height: 0.1;
-}
-.deleteB {
-  position: absolute;
-
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  animation: fadeIn 2s;
-  -webkit-animation: fadeIn 2s;
-  -moz-animation: fadeIn 2s;
-  -o-animation: fadeIn 2s;
-  -ms-animation: fadeIn 2s;
-}
-p.card-text.card-details {
-  height: 120px;
-  overflow-y: hidden;
-}
-p.card-text.card-details:hover {
-  overflow-y: auto;
-  overflow-wrap: break-word;
-}
-
-.imageV {
-  max-height: 35vh;
-  height: 27.5vh;
-}
-.followrs{
-  position: relative;
-  right: 6rem;
-  bottom: 2.2rem;
-  max-width: 3rem;
-  cursor: none
-}
-.badge{
-  position: relative;
-  bottom: 2.9rem;
-
-}
-button.followrs{
-  max-height: 2.2rem;
-max-width: 2.5rem;
-cursor: none;
-border: lightgray;
-pointer-events: none;
- border-radius: 40%;
-}
-.follow{
-  max-width: 1rem;
-}
-svg.follow{
-  max-width: 1rem;
 }
