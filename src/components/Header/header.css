@@ -9,7 +9,8 @@
   }
   #navbarScroll{
     position: relative;
-    right: 10rem;
+    right: 13.5rem;
+    left: 1rem;
   }
 }
 .navbar-brand {
@@ -18,12 +19,13 @@ margin-left: 1.8rem;
 #navbarScroll{
   letter-spacing: 0.2rem;
   font-weight: 700;
-  margin-left: 20rem;
+  position: relative;
+
   transition: background-color .5s;
   font-weight: normal;
   font-size: 18px;
   text-transform: uppercase;
-
+  transition: 0.5s;
 }
 .nav-main {
   background-color: rgb(255, 255, 255);
@@ -37,6 +39,7 @@ box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 a.nav-title.navbar-brand {
   color: #00558a;
 }
+
 .icon-header{
   height: 35px;
 }
@@ -65,4 +68,33 @@ button.AddVacationB.btn.btn-outline-secondary{
 }
 button.ChartReportsB.btn.btn-outline-secondary{
 border: none;
+}
+
+.me-auto.navbar-nav.navbar-nav-scroll {
+  margin: 0 auto;
+}
+.dropdown-header {
+  letter-spacing: 0px;
+}
+p.flyButtons {
+  display: flex;
+  padding-left: 54px;
+}
+.signinB{
+  padding-left:1px; 
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    right: 2rem;
+}
+button.navbar-toggler.collapsed {
+  color: transparent;
+}
+button#dropdown-basic {
+  background-color: aliceblue;
+  font-size: 14px;
+  border: none;
+  color: rgba(0,0,0,.55);
+  font-weight: 600;
+  padding: 6px;
 }
