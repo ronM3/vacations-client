@@ -31,48 +31,66 @@ export default function Header() {
   }
 
   return (
-    <div className="header">
-      <Navbar className="nav-main" bg="white" expand="lg">
-        <Navbar.Brand className="nav-title" href="#">
-          <img
-            className="icon-header"
-            src={web}
-            alt=""
-            style={{ maxHeight: "50px" }}
-          />{" "}
-          Ultimate Vacations
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto" style={{ maxHeight: "130px" }} navbarScroll>
-            <Nav.Link onClick={onHomeClicked}>Home</Nav.Link>
-            <Nav.Link onClick={onDealsClicked} href="#V">Deals</Nav.Link>
-            <Nav.Link onClick={onAboutClicked}>About</Nav.Link>
-          </Nav>
-          <Navbar.Text>
-            {currentUserState === "admin" && (
-              <Dropdown title="Manager panel" id="basic-nav-dropdown">
+    <><head>
+      <script src="https://kit.fontawesome.com/30d02876ed.js" crossOrigin="anonymous"></script>
+    </head><div className="header">
+        <Navbar className="nav-main" bg="white" expand="lg">
+          <Navbar.Brand className="nav-title" href="#">
+            <img
+              className="icon-header"
+              src={web}
+              alt=""
+              style={{ maxHeight: "50px" }} />{" "}
+            Ultimate Vacations
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav className="me-auto" style={{ maxHeight: "130px" }} navbarScroll>
+              <Nav.Link onClick={onHomeClicked}>Home</Nav.Link>
+              <Nav.Link onClick={onDealsClicked} href="#V">Deals</Nav.Link>
+              <Nav.Link onClick={onAboutClicked}>About</Nav.Link>
+            </Nav>
+            <Navbar.Text>
+              {currentUserState === "admin" && (
+                <Dropdown title="Manager panel" id="basic-nav-dropdown">
+                  <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                    Manager panel
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <AddVacation />
+                    <ChartReports />
+                  </Dropdown.Menu>
+                </Dropdown>
+              )}
+            </Navbar.Text>
+
+            {!userIsLoggedIn && (
+              <Dropdown
+                align="end"
+                title="Dropdown end"
+                id="dropdown-menu-align-end"
+              >
                 <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                  Manager panel
+                <i className="far fa-user"></i> Account
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                  <AddVacation />
-                  <ChartReports />
+                <Dropdown.Menu className="dropdown-menu dropleft">
+                  <Dropdown.Header>Welcome to Ultimate Vacations</Dropdown.Header>
+                  <p className="flyButtons">
+                    <span className="signinB">
+                      <Login />
+                    </span>
+                    <span>
+                      <Register />
+                    </span>
+                  </p>
                 </Dropdown.Menu>
               </Dropdown>
             )}
-          </Navbar.Text>
-
-          {!userIsLoggedIn && (
-            <>
-              <Login />
-              <Register />
-            </>
-          )}
-          {userIsLoggedIn && <SigningCom />}
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+            {userIsLoggedIn && <SigningCom />}
+          </Navbar.Collapse>
+        </Navbar>
+      </div></>
   );
 }
