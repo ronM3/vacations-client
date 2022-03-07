@@ -1,5 +1,4 @@
 export class AppState {
-
   public vacations: IVacation [] = [];
   public currentUserState: string = "";
   public userIsLoggedIn: boolean = false;
@@ -7,11 +6,7 @@ export class AppState {
   public followedVacation = []; 
   public chartData: any = {};
   public followersAmount = [];
-  // public sessionStorageToken = sessionStorage.getItem("token")
 }
-
-
-
 
 export interface IVacation {
   id: number;
