@@ -79,21 +79,9 @@ body {
 
 .about-right {
   background: #12192c;
-  height: 70vh;
-
   max-width: 95vh;
   color: #fff;
   border-radius: 12px 12px 12px 12px;
-}
-.about-right h1 {
-  font-size: 5rem;
-
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-.about-right h1 span {
-  color: #b721ff;
 }
 .about-right h2 {
   font-weight: 600;
@@ -111,13 +99,13 @@ body {
 .about-para p {
   font-weight: 300;
   opacity: 0.8;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
+  line-height: 1.8;
 }
 .typing-demo {
   background-color: rgb(230, 197, 203);
-  width: 11ch;
-  position: relative;
-  left: 22.5rem;
+  width: 10ch;
+  margin: 0 auto; 
   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
@@ -139,21 +127,4 @@ body {
   height: 400px;
   object-fit: cover;
   object-position: 50% 50%;
-}
-.small-p {
-  position: relative;
-  bottom: 1rem;
-}
-.technogl {
-  position: relative;
-  bottom: 2.3rem;
-}
-@media only screen and (max-width: 950px) {
-  .typing-demo {
-    margin-left: -21rem;
-  }
-  .about-right{
-    overflow: hidden;
-    height: 80vh;
-  }
 }

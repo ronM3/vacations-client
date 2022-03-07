@@ -40,3 +40,7 @@ input#fileupload {
   line-height: 1rem;
   text-transform: uppercase;
 }
+span#wrong-info{
+  height: 4vh;
+}
+

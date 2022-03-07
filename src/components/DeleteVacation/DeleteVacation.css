@@ -1,6 +1,9 @@
 .deleteB {
-  bottom: 12.5px;
-  left: 7px;
+  position: absolute;
+  display: grid;
+  bottom: 14.5px;
+  height: 2.3rem;
+  left: 14.5rem;
   transition: transform 1s;
   transform-style: preserve-3d;
   animation: fadeIn 2s;
@@ -17,10 +20,18 @@
   max-height: 230px;
   margin-left: 0.8em;
 }
+.delete-trash {
+height: 1.5em;
+}
+@media only screen and (max-width: 950px) {
+  .deleteB {
+    bottom: 21.5px;
+  }
+}
 
-button.deleteB.btn.btn-outline-danger {
-  margin-top: -15px;
-  margin-bottom: 5px;
-  margin-left: 12.5rem;
-  position: relative;
+#modal-bodyS .card .deleteB{
+  display: none;
+}
+#modal-bodyS .card .editB{
+  display: none;
 }

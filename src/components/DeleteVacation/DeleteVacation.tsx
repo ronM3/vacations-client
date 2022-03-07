@@ -16,7 +16,7 @@ export default function DeleteVacation(props: IVacation) {
 
   function onDeleteClicked() {
     axios
-      .delete(`http://localhost:3001/vacations/${props.id}`)
+      .delete(`/vacations/${props.id}`)
       .then((response) => {
         dispatch({
           type: ActionType.DeleteVacation,
@@ -34,7 +34,7 @@ export default function DeleteVacation(props: IVacation) {
           className="deleteB"
           onClick={handleShow}
         >
-          <Trash />
+          <Trash className="delete-trash" />
         </Button>
 
         <Modal
@@ -61,7 +61,7 @@ export default function DeleteVacation(props: IVacation) {
             </p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger" onClick={onDeleteClicked}>
+            <Button variant="danger" className="modal-deleteB" onClick={onDeleteClicked}>
               Delete
             </Button>
             <Button

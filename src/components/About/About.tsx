@@ -13,9 +13,14 @@ export default function About() {
         crossOrigin="anonymous"
       />
       <div className="about">
-        <Image src={laptop} fluid />
+        <Image src="https://i.ibb.co/d41dgwK/coding-man.jpg" fluid />
         <Container>
+         
+          <Row className="justify-content-md-center">
+          <Col>
           <div className="typing-demo">About Me</div>
+          </Col>
+          </Row>
           <Row>
             <Col>
               <div className="about-left">
@@ -41,7 +46,11 @@ export default function About() {
                       </i>
                     </li>
                     <li>
-                      <i className="fab fa-linkedin"></i>
+                      <i >
+                        <a className="fab fa-linkedin"
+                        href="https://www.linkedin.com/in/ron-motola-728038230"    
+                        />
+                      </i>
                     </li>
                     <li>
                       <i>
@@ -69,10 +78,11 @@ export default function About() {
                     every vacation can change in real time when admin make any
                     change.
                   </p>
-                  <p className="small-p">
-                    Admin have the options to view statistic reports using chart.js  to delete, edit, and add new
-                    vacations that will change real time using socket.io
-                  </p>
+                  <span className="small-p">
+                    Admin have the options to view statistic reports using
+                    chart.js, to delete, edit, and add new vacations that will
+                    change real time using socket.io
+                  </span>
                   <Row className="technogl">
                     <Col>
                       <p className="techs">
@@ -80,7 +90,7 @@ export default function About() {
 
                         <ul>
                           <li> HTML, CSS, Bootstrap</li>
-                          <li>REACT-TypeScript, Redux</li>
+                          <li>REACT.TS, Redux</li>
                         </ul>
                       </p>
                     </Col>

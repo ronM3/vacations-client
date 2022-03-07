@@ -1,11 +1,11 @@
-import axios from "axios";
-import React, { ChangeEvent, useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { ChangeEvent, useState } from "react";
 import { Exclamation, ExclamationTriangle } from "react-bootstrap-icons";
 import { useDispatch } from "react-redux";
 import { ActionType } from "../../Redux/action-type";
 import "./AddVacation.css";
 import cogoToast from "cogo-toast";
+import { Button, Form, Modal } from "react-bootstrap";
+import axios from "axios";
 
 function AddVacation() {
   const dispatch = useDispatch();
@@ -31,7 +31,7 @@ function AddVacation() {
       setFileName(e.target.files[0].name);
     }
     if (fileName != null) {
-      setImage(`http://127.0.0.1:3001/${e.target.files[0].name}`);
+      setImage(`/${e.target.files[0].name}`);
     }
   };
   function onCancellClicked() {
@@ -67,12 +67,9 @@ function AddVacation() {
     const myFormData = new FormData();
     myFormData.append("file", file);
     myFormData.append("fileName", fileName);
-    const imageResponse = await axios.post(
-      "http://localhost:3001/files/upload",
-      myFormData
-    );
+    const imageResponse = await axios.post("/files/upload", myFormData);
     axios
-      .post("http://localhost:3001/vacations", newAddedVacation)
+      .post("/vacations", newAddedVacation)
       .then((response) => {
         dispatch({
           type: ActionType.AddVacation,
@@ -109,7 +106,6 @@ function AddVacation() {
 
   const onPriceChanged = (event: ChangeEvent<HTMLInputElement>) => {
     setPrice(event.target.value);
-    console.log(price);
   };
 
   const onDatesChanged = (event: ChangeEvent<HTMLInputElement>) => {
@@ -149,7 +145,7 @@ function AddVacation() {
           </Modal.Header>
           <Modal.Body className="modal-body">
             {validDetails && (
-              <span id="wrong-info" className="wrong-details">
+              <span id="wrong-info" className="wrong-details addv">
                 <Exclamation className="emoji-wrong" /> Must field all the
                 details
               </span>

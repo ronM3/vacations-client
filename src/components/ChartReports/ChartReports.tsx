@@ -1,11 +1,11 @@
-import axios from "axios";
 import { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
-import { Bar } from "react-chartjs-2";
 import "./ChartReports.css";
 import "chartjs-plugin-datalabels";
 import { useSelector } from "react-redux";
 import { AppState } from "../../Redux/AppState";
+import { Button, Modal } from "react-bootstrap";
+import axios from "axios";
+import { Bar } from "react-chartjs-2";
 
 export default function ChartReports() {
   let [Show, setShow] = useState(false);
@@ -16,7 +16,7 @@ export default function ChartReports() {
   let followersPerVacation = [];
 
   try {
-    axios.get("http://localhost:3001/followedVacations").then((response) => {
+    axios.get("/followedVacations").then((response) => {
       followersPerVacation = response.data;
 
       for (let destination of followersPerVacation) {

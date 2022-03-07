@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+.countDown {
+  display: inline-block;
+  color: white;
+  font-size: 1.6rem;
+  position: absolute;
+  right: -8.5rem;
+  top: -10rem;
+  font-size: 800;
+  font-family: "Comfortaa", cursive;
+  transition: all 0.4s ease-in-out 0.4s;
+}
+.time-content span {
+  text-align: center;
+  font-size: 32px;
+  margin: 5px;
+  font-family: "Chewy";
+  width: calc(97% / 4);
+}
+.box {
+  font-family: "Verdana, Geneva, sans-serif" !important;
+  margin: 0 5px;
+  padding: 1px;
+  position: relative;
+  width: 60px;
+  height: 86px;
+  font-size: 60px;
+  line-height: 86px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: #555555;
+  background: rgb(235, 235, 235);
+}
+.flash-heading {
+  position: relative;
+  top: 1rem;
+  font-family:'Chewy';
+  transform: scale(1.1);
+  font-weight: 800;
+}
+@media only screen and (max-width: 950px) {
+  .countDown{
+    display: flex;
+    position: absolute;
+    margin-left: -3rem;
+  }
+}
