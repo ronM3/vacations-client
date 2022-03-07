@@ -12,12 +12,10 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-
 import About from "./components/About/About";
 
 export default function App() {
   const dispatch = useDispatch();
-
   let token = sessionStorage.getItem("token");
   let userName = sessionStorage.getItem("userName");
   let userType = sessionStorage.getItem("userType");
